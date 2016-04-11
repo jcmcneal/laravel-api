@@ -15,7 +15,7 @@ class TasksController extends Controller
      */
     public function index()
     {
-        $tasks = Tasks::all()->keyBy('id');
+        $tasks = (object) Tasks::all()->keyBy('id');
         // $data['_token'] = csrf_token();
         return response()->json($tasks);
     }
