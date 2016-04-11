@@ -17,7 +17,7 @@ class TasksController extends Controller
     {
         $tasks = Tasks::all()->keyBy('id');
         // $data['_token'] = csrf_token();
-        return response(json_encode($tasks, JSON_FORCE_OBJECT))
+        return response(json_encode($tasks, JSON_FORCE_OBJECT | JSON_NUMERIC_CHECK))
                 ->header('Content-Type', 'application/json');
     }
 

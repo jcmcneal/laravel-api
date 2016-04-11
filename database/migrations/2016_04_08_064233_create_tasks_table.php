@@ -16,8 +16,8 @@ class CreateTasksTable extends Migration
             $table->increments('id');
             //$table->integer('user_id')->unsigned();
             $table->string('title');
-            $table->integer('priority')->default(1);
-            $table->integer('completed')->default(0);
+            $table->smallInteger('priority')->default(1);
+            $table->smallInteger('completed')->default(0);
             $table->timestamps();
             // Foreign Keys
             // $table->foreign('user_id')
